@@ -1,0 +1,289 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link href="css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style>
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+	.nav-link:hover{
+		border-bottom: 3px solid teal;
+	}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+	@media only screen and (max-width: 850px){
+		.tab {
+			font-size: 15px !important;
+		}
+	}
+* {
+    box-sizing: border-box
+}
+h3 {
+    font-family: TimesNewRomanPSMT;
+    font-size: 20px;
+    padding-top: 30px;
+}
+	#tab1{
+		display: none;
+	}
+.tab {
+    float: left;
+    border-right: 2px solid #ccc;
+    /*background-color: #f1f1f1;*/
+    width: 25%;
+    /*height: 300px;*/
+    margin: auto;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: TimesNewRomanPSMT;
+    font-size: 25px;
+}
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 10px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.tab button:hover {
+    border-left: 8px solid #008080;
+}
+.tab button.active {
+/*background-color: #ccc;*/
+	border-left: 8px solid #008080;
+}
+.tab button.active2 {
+    border-left: 8px solid #008080;
+}
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    /*border: 1px solid #ccc;*/
+    width: 60%;
+    border-left: none;
+    height: 300px;
+    display: none;
+}
+.tabcontent2 {
+    float: left;
+    padding: 0px 12px;
+    /*border: 1px solid #ccc;*/
+    width: 70%;
+    border-left: none;
+    height: 300px;
+    display: none;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.nav-link1 {
+    width: 143px;
+    height: 33px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: TimesNewRomanPSMT;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    padding-left: 50px;
+}
+.nav-link2 {
+    width: 143px;
+    height: 33px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-family: TimesNewRomanPSMT;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    padding-left: 50px;
+}
+
+@media (max-device-width:600px) {
+h3 {
+    font-size: 14px !important;
+}
+.tablinks .tablinks2{
+    margin-left: 0px !important;
+    padding-right: 20px !important;
+    font-size: 14px !important;
+}
+}
+</style>
+</head>
+
+<body>
+<h1 style="font-family: Times New Roman, serif; line-height: 23px; text-shadow: 0px 3px 6px #bfbfbf; margin: 0px"> <img src="img/300px_optimized.png" align="left" style="padding: 22px;width: 119px; shadow: 0px 3px 6px #bfbfbf;" />
+  <div style="padding: 30px"> <span style="font-size: 25px;">P</span><span style="font-size: 20px;">ONDICHERRY</span><br/>
+    <span style="font-size: 25px;">E</span><span style="font-size: 20px;">NGINEERING</span> <br/>
+    <span style="font-size: 25px;">C</span><span style="font-size: 20px;">OLLEGE</span> </div>
+</h1>
+<br>
+<hr>
+<nav class="navbar navbar-expand-lg navbar-light  nav-link1"  >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1" style="margin: 0px; background: white">
+    <ul class="navbar-nav mr-auto" style="padding-right: 20px;">
+      <li class="nav-item" > <a class="nav-link " href="#" style="padding-right: 20px;">IIS<span style="font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif'">&nbsp;</span></a> </li>
+      <li class="nav-item"><a class="nav-link" href="#"style="padding-right: 20px;">PLACEMENTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#"style="padding-right: 20px;">RESOURCES</a></li>
+      <li class="nav-item"><a class="nav-link" href="#"style="padding-right: 20px;">ALUMNI NETWORK</a></li>
+      <li class="nav-item"><a class="nav-link" href="#"style="padding-right: 20px;">PEC OPEN ACCESS</a></li>
+		<li class="nav-item"><a class="nav-link" href="#"style="padding-right: 20px;">CMS</a></li>
+    </ul>
+    <div class="container" onclick="myFunction(this)" align="right">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </div>
+</nav>
+<hr>
+<div id="tab1">
+<div class="tab " >
+  <button class="tablinks" onmouseover="openTab(event, 'about')">ABOUT</button>
+  <button class="tablinks" onmouseover="openTab(event, 'gallery')">GALLERY</button>
+  <button class="tablinks" id="oc" onmouseover="openTab(event, 'oncampus')">ON CAMPUS</button>
+  <button class="tablinks" onmouseover="openTab(event, 'academics')">ACADEMICS</button>
+  <button class="tablinks" onmouseover="openTab(event, 'admin')">ADMINISTRATION</button>
+  <button class="tablinks" onmouseover="openTab(event, 'teqip')">TEQIP</button>
+  <button class="tablinks" onmouseover="openTab(event, 'admission')">ADMISSIONS</button>
+  <button class="tablinks" onmouseover="openTab(event, 'archive')">ARCHIVE</button>
+</div>
+<div id="about" class="tabcontent" style="position: relative;">
+  <h3>ABOUT</h3>
+  <p>Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and College development and is managed by a Board of Governors.</p>
+</div>
+<div id="gallery" class="tabcontent">
+  <h3>GALLERY</h3>
+  <p style="display: inline-block"><img src="../../Pictures/Saved Pictures/21-5cee99e02a3a3__700.jpg" height="200px"><img src="../../Pictures/Saved Pictures/comics-mr-lovenstein-33-5c91f4ae24000__700.jpg" height="200px"></p>
+</div>
+<div id="oncampus" class="tabcontent2">
+  <div class="tab" style="width:30%">
+    <button class="tablinks2" onmouseover="openTab2(event, 'camplife', 'oncampus')">Campus Life</button>
+    <button class="tablinks2" onmouseover="openTab2(event, 'commitees', 'oncampus')">Commitees</button>
+    <button class="tablinks2" onmouseover="openTab2(event, 'cells', 'oncampus')">Cells</button>
+	  <button class="tablinks2" onmouseover="openTab2(event, 'clubs', 'oncampus')">Clubs</button>
+    <button class="tablinks2" onmouseover="openTab2(event, 'chapters', 'oncampus')">Chapters</button>
+    <button class="tablinks2" onmouseover="openTab2(event, 'facilities', 'oncampus')">Facilities</button>
+	  <button class="tablinks2" onmouseover="openTab2(event, 'events', 'oncampus')">Events</button>
+  </div>
+  
+    <div id="camplife" class="tabcontent2">
+      <h3>Campus Life</h3>
+      <p>This campus has no life, lol!</p>
+    </div>
+    <div id="commitees" class="tabcontent2">
+      <h3>Commitees</h3>
+      <p>...................................</p>
+    </div>
+    <div id="cells" class="tabcontent2">
+      <h3>Cells</h3>
+      <p>++++++++++++++++++++++++++++++++++</p>
+    </div>
+	<div id="clubs" class="tabcontent2">
+      <h3>Clubs</h3>
+      <p>++++++++++++++++++++++++++++++++++</p>
+    </div>
+	<div id="chapters" class="tabcontent2">
+      <h3>Chapters</h3>
+      <p>++++++++++++++++++++++++++++++++++</p>
+    </div>
+	<div id="events" class="tabcontent2">
+      <h3>Events</h3>
+      <p>++++++++++++++++++++++++++++++++++</p>
+    </div>
+	<div id="facilities" class="tabcontent2">
+      <h3>Facilities</h3>
+      <p>++++++++++++++++++++++++++++++++++</p>
+    </div>
+  
+</div>
+</div>
+<script>
+function openTab(evt, tab) {
+  var i, tabcontent, tablinks;
+  document.getElementById("oncampus").style.display = "none";
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tab).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+function openTab2(evt, tab, tab1) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent2");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks2");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tab1).style.display = "inline-block";
+  document.getElementById(tab).style.display = "inline-block";
+  document.getElementsById("oc").currentTarget.className += " active";
+  evt.currentTarget.className += " active";
+}
+function myFunction(x) {
+  x.classList.toggle("change");
+  if(document.getElementById("tab1").style.display != "block")
+  	document.getElementById("tab1").style.display = "block";
+  else
+	document.getElementById("tab1").style.display = "none";
+}
+</script> 
+<script src="js/jquery-3.3.1.min.js"></script> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.3.1.js"></script>
+</body>
+</html>
